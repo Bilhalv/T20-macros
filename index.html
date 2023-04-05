@@ -5,8 +5,63 @@
         <link rel="stylesheet" href="DarkMode.css">
     </head>
     <body>
-        <header>T20 Macros</header>
-        <h1>Focus1</h1>
-        <p>focusfocusfocus</p>
+        <header><table style="margin: 0 0"><th><img height="30px" width="30px" src="t20.png" style="text-align: left; border-radius: 50px;"></th><th><h1>&nbsp;T20 Macros</h1></th></table></header>
+        <div style="margin: 0 auto">
+            <table>
+                <th>
+                    <article style="background-color: #222;">
+                        <h2>Focus1</h2>
+                        <form>
+                            <label for="nom">Nome da magia: </label>
+                            <input type="string" id="nom" name="nom" required>
+                            <br>
+                            <label for="dur">Duração da magia: </label>
+                            <input type="string" id="dur" name="dur" required>
+                            <br>
+                            <label for="alv">Alvo/area da magia: </label>
+                            <input type="string" id="alv" name="alv" required>
+                            <br>
+                            <label for="cd">CD da magia: </label>
+                            <input type="number" id="cd" name="cd" required>
+                            <br>
+                            <label for="desc">Descrição da magia: </label>
+                            <textarea type="string" id="desc" name="desc" required></textarea>
+                            <br>
+                            <div>
+                                <label>Tipo: </label>
+                                <select id="type">
+                                    <option value="Universal">Universal</option>
+                                    <option value="Arcana">Arcana</option>
+                                    <option value="Divina">Divina</option>
+                                </select>
+                                <button onclick="processInput()">Selecionar</button>
+                            </div>
+                            <div>
+                                <label>Execução: </label>
+                                <select id="exe">
+                                    <option value="Padrão">Padrão</option>
+                                    <option value="Movimento">Movimento</option>
+                                    <option value="Completa">Completa</option>
+                                    <option value="Livre">Livre</option>
+                                </select>
+                                <button onclick="processInput()">Selecionar</button>
+                            </div>
+                            <br>
+                            <div>
+                                <label>Resistencia: </label>
+                                <select id="resist">
+                                    <option value="Vontade">Vontade</option>
+                                    <option value="Fortitude">Fortitude</option>
+                                    <option value="Reflexos">Reflexos</option>
+                                </select>
+                                <button onclick="processInput()">Selecionar</button>
+                            </div>
+                            <!-- &{template:spell}{{character=NOME DO PERSONAGEM}}{{spellname=NOME DA MAGIA}}{{type=TIPO}}{{execution=AÇÃO}}{{duration=DURAÇÃO}}{{range=ALCANCE}}{{targetarea=ALVO}}{{resistance=RESISTÊNCIA}}{{description=DESCRIÇÃO DA MAGIA, PODENDO SER O TEXTO DELA, ANOTAÇÕES, OU BOTÕES E GIFS}}{{cd=CD DA MAGIA}}-->
+                            <button onclick="processInput()">Criar Macro</button>
+                        </form>
+                    </article>
+                </th>
+            </table>
+        </div>
     </body>
 </html>

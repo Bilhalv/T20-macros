@@ -17,10 +17,14 @@ margin: 10px 0;
 main {
 padding: 20px;
 }
-<!-- descobri que da pra criar um tipo variável que simboliza um tipo de texto-->
+
 article {
 margin-bottom: 20px;
 text-align: justify;
+background-color: #222;
+padding: 20px;
+margin: 15px;
+width: 100%;
 }
 
 h2 {
@@ -31,6 +35,7 @@ margin: 20px 0 10px;
 p {
 line-height: 1.5;
 margin-bottom: 15px;
+font-size: 15px;
 }
 
 a {
@@ -52,4 +57,7 @@ max-width: 2000px;
   }
 hr {
 border-color: rgb(90, 90, 90);
+}
+table {
+    margin: 0 auto;
 }
