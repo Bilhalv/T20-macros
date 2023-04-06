@@ -75,6 +75,9 @@ input {
   border-radius: 5px;
   width: 100%;
 }
+select {
+  text-align: center;
+}
 button:hover,
 select:hover,
 textarea:hover,
