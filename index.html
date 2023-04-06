@@ -8,59 +8,110 @@
         <header><table style="margin: 0 0"><th><img height="30px" width="30px" src="t20.png" style="text-align: left; border-radius: 50px;"></th><th><h1>&nbsp;T20 Macros</h1></th></table></header>
         <div style="margin: 0 auto">
             <table>
-                <th>
-                    <article style="background-color: #222;">
-                        <h2>Focus1</h2>
+                <tr>
+                    <td>
+                        <article style="background-color: #222;">
+                        <h2>Macro de Magia</h2>
                         <form>
-                            <label for="nom">Nome da magia: </label>
-                            <input type="string" id="nom" name="nom" required>
-                            <br>
-                            <label for="dur">Duração da magia: </label>
-                            <input type="string" id="dur" name="dur" required>
-                            <br>
-                            <label for="alv">Alvo/area da magia: </label>
-                            <input type="string" id="alv" name="alv" required>
-                            <br>
-                            <label for="cd">CD da magia: </label>
-                            <input type="number" id="cd" name="cd" required>
-                            <br>
-                            <label for="desc">Descrição da magia: </label>
-                            <textarea type="string" id="desc" name="desc" required></textarea>
-                            <br>
-                            <div>
-                                <label>Tipo: </label>
-                                <select id="type">
-                                    <option value="Universal">Universal</option>
-                                    <option value="Arcana">Arcana</option>
-                                    <option value="Divina">Divina</option>
-                                </select>
-                                <button onclick="processInput()">Selecionar</button>
-                            </div>
-                            <div>
-                                <label>Execução: </label>
-                                <select id="exe">
-                                    <option value="Padrão">Padrão</option>
-                                    <option value="Movimento">Movimento</option>
-                                    <option value="Completa">Completa</option>
-                                    <option value="Livre">Livre</option>
-                                </select>
-                                <button onclick="processInput()">Selecionar</button>
-                            </div>
-                            <br>
-                            <div>
-                                <label>Resistencia: </label>
-                                <select id="resist">
-                                    <option value="Vontade">Vontade</option>
-                                    <option value="Fortitude">Fortitude</option>
-                                    <option value="Reflexos">Reflexos</option>
-                                </select>
-                                <button onclick="processInput()">Selecionar</button>
-                            </div>
-                            <!-- &{template:spell}{{character=NOME DO PERSONAGEM}}{{spellname=NOME DA MAGIA}}{{type=TIPO}}{{execution=AÇÃO}}{{duration=DURAÇÃO}}{{range=ALCANCE}}{{targetarea=ALVO}}{{resistance=RESISTÊNCIA}}{{description=DESCRIÇÃO DA MAGIA, PODENDO SER O TEXTO DELA, ANOTAÇÕES, OU BOTÕES E GIFS}}{{cd=CD DA MAGIA}}-->
-                            <button onclick="processInput()">Criar Macro</button>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="nom" id="lable">Nome da magia: </label>
+                                    </td>
+                                    <td>
+                                        <input type="string" id="nom" name="nom" required placeholder="Nome da magia">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <label for="dur" id="lable">Duração da magia: </label>
+                                    </td>
+                                    <td>
+                                        <input type="string" id="dur" name="dur" required placeholder="Duração da magia">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <label for="alv" id="lable">Alvo/area da magia: </label>
+                                    </td>
+                                    <td>
+                                        <input type="string" id="alv" name="alv" required placeholder="Alvo ou area da magia">
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>
+                                        <label for="cd" id="lable">CD da magia: </label>
+                                    </td>
+                                    <td>
+                                        <input type="number" id="cd" name="cd" required placeholder="Cd da magia, 10+(bonus)+(metade do nivel)">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label id="lable">Tipo: </label>
+                                    </td>
+                                    <td>
+                                        <select id="type" required>
+                                            <option value="">--Tipo--</option>
+                                            <option value="Universal">Universal</option>
+                                            <option value="Arcana">Arcana</option>
+                                            <option value="Divina">Divina</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label id="lable">Execução: </label>
+                                    </td>
+                                    <td>
+                                        <select id="exe" required>
+                                            <option value="">--Execução--</option>
+                                            <option value="Padrão">Padrão</option>
+                                            <option value="Movimento">Movimento</option>
+                                            <option value="Completa">Completa</option>
+                                            <option value="Livre">Livre</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label id="lable">Resistencia: </label>
+                                    </td>
+                                    <td>
+                                        <select id="resist" required>
+                                            <option value="">--Teste de resistência--</option>
+                                            <option value="Vontade">Vontade</option>
+                                            <option value="Fortitude">Fortitude</option>
+                                            <option value="Reflexos">Reflexos</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <textarea cols="50%" type="string" id="desc" name="desc" required placeholder="Descrição da magia, pode inserir links para gifs e imagens, usando a macro padrao do roll20"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="container">
+                                        <button onclick="processInput()">Criar Macro</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
                         </form>
                     </article>
-                </th>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="magia" style='margin: 0 auto;'></div>
+                        <script src="macros/magia.js"></script>
+                    </td>
+                </tr>
             </table>
         </div>
     </body>
