@@ -6,14 +6,11 @@
     </head>
     <body>
         <header><table style="margin: 0 0"><th><img height="30px" width="30px" src="t20.png" style="text-align: left; border-radius: 50px;"></th><th><h1>&nbsp;T20 Macros</h1></th></table></header>
-        <div style="margin: 0 auto">
-            <table>
-                <tr>
-                    <td>
-                        <article style="background-color: #222;">
-                        <h2>Macro de Magia</h2>
-                        <form>
-                            <table>
+        <div>
+            <article style="background-color: #222; margin: 15px auto;">
+                <h2>Macro de Magia</h2>
+                <form>
+                    <table>
                                 <tr>
                                     <td>
                                         <label for="nom" id="lable">Nome da magia: </label>
@@ -46,7 +43,7 @@
                                         <label for="cd" id="lable">CD da magia: </label>
                                     </td>
                                     <td>
-                                        <input type="number" id="cd" name="cd" required placeholder="Cd da magia, 10+(bonus)+(metade do nivel)">
+                                        <input type="number" id="cd" name="cd" required placeholder="Cd da magia, 10+(bonus)+(lvl/2)">
                                     </td>
                                 </tr>
                                 <tr>
@@ -97,22 +94,15 @@
                                 <tr>
                                     <td colspan="2">
                                         <div class="container">
-                                        <button onclick="processInput()">Criar Macro</button>
+                                        <button onclick="processInput(event)">Criar Macro</button>
                                         </div>
                                     </td>
                                 </tr>
-                            </table>
-                        </form>
-                    </article>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <div id="magia" style='margin: 0 auto;'></div>
-                        <script src="macros/magia.js"></script>
-                    </td>
-                </tr>
-            </table>
+                    </table>
+                </form>
+            </article>
+            <div id="magia" style='margin: 0 auto;'></div>
+            <script src="macros/magia.js"></script>
         </div>
     </body>
 </html>

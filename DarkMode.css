@@ -19,13 +19,13 @@ padding: 20px;
 }
 
 article {
-margin-bottom: 20px;
-text-align: justify;
-background-color: #222;
-padding: 20px;
-margin: 15px;
-width: 100%;
-border-radius: 15px;
+    margin: 0 auto;
+    text-align: justify;
+    background-color: #222;
+    padding: 20px;
+    margin: 15px;
+    max-width: 25%;
+    border-radius: 15px;
 }
 
 h2 {
@@ -84,7 +84,7 @@ button:hover, select:hover, textarea:hover, input:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 button {
     width: 50%;
     margin: 0 auto;
